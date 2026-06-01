@@ -1,3 +1,4 @@
+import {Button} from "../components/ui/button.tsx";
 
 const HomePage = () => {
     return (
@@ -5,6 +6,7 @@ const HomePage = () => {
             <h1 className="text-center">
                 Home Page
             </h1>
+            <Button>Button</Button>
         </>
     )
 }
