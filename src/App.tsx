@@ -31,6 +31,8 @@ import MultiFieldFormWithZod from "./components/LessonTen/MultiFieldFormWithZod.
 import MultiFieldFormWithHookForm from "./components/LessonTen/MultiFieldFormWithHookForm.tsx";
 import ProductListPage from "./pages/ProductListPage.tsx";
 import ProductPage from "@/pages/ProductPage.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
+import ProtectedRoute from "@/components/ProtectedRoute.tsx";
 // import {useEffect} from "react";
 
 
@@ -143,10 +145,13 @@ function App() {
                     <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation />} />
                     <Route path="multifield-form-zod" element={<MultiFieldFormWithZod />} />
                     <Route path="multifield-form-with-hook" element={<MultiFieldFormWithHookForm />} />
-                    <Route path="products">
+
+                    <Route path="products" element={<ProtectedRoute />}>
                         <Route index element={<ProductListPage />} />
                         <Route path=":productId" element={<ProductPage />} />
                     </Route>
+
+                    <Route path="login" element={<LoginPage />} />/
 
                 </Route>
                 {/*<Route path="files/*" element={<File />} />*/}
