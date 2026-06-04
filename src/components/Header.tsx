@@ -1,4 +1,5 @@
 import {Link} from "react-router";
+import {AuthButton} from "@/components/AuthButton.tsx";
 
 const Header = () => {
 
@@ -11,9 +12,10 @@ const Header = () => {
                     </Link>
 
 
-                    <nav className="flex gap-4 text-white font-medium">
+                    <nav className="flex gap-4 items-center text-white font-medium">
                         <Link to="/">Home</Link>
-                        <Link to="/products">Products</Link>
+                        {/*<Link to="/products">Products</Link>*/}
+                        <AuthButton/>
                     </nav>
                 </div>
             </header>
