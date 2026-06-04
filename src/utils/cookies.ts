@@ -1,17 +1,17 @@
-import Cookies from "js-cookie"
+import Cookies from 'js-cookie'
 
 export function setCookie(
-    name: string,
-    value: string,
-    options?: Cookies.CookieAttributes
+  name: string,
+  value: string,
+  options?: Cookies.CookieAttributes
 ) {
-    Cookies.set(name, value, options)
+  Cookies.set(name, value, options)
 }
 
 export function getCookie(name: string): string | undefined {
-    return Cookies.get(name)
+  return Cookies.get(name)
 }
 
 export function deleteCookie(name: string, options?: Cookies.CookieAttributes): void {
-    Cookies.remove(name, options)
+  Cookies.remove(name, options)
 }
